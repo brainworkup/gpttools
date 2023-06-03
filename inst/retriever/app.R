@@ -1,6 +1,5 @@
-rlang::check_installed(
-  c("shiny", "bsicons", "cli", "glue", "gptstudio", "gpttools", "waiter")
-)
+packages1 <- c("shiny", "bsicons", "cli", "glue", "gptstudio", "gpttools", "waiter")
+lapply(packages1, rlang::check_installed)
 
 library(gpttools)
 
@@ -114,7 +113,7 @@ ui <- bslib::page_fluid(
             shiny::actionButton(
               inputId = "chat", label = "Chat",
               icon = shiny::icon("robot"),
-              width = "100%", class = "btn-sucess"
+              width = "100%", class = "btn-success"
             )
           )
         )
