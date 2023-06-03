@@ -73,7 +73,7 @@ ui <- bslib::page_fluid(
       bslib::accordion_panel(
         "Preferences",
         icon = bsicons::bs_icon("gear-wide-connected"),
-        shiny::selectInput(model, "Model",
+        shiny::selectInput("model", "Model",
           choices = c("gpt-3.5-turbo", "gpt-4")
         ),
         shiny::radioButtons(
